@@ -10,15 +10,29 @@ def newProd(arr):
     x = 1
     for i in arr:
         x = x * i
-    print(x)
     index = 0
     while index < len(arr):
         arr[index] = x / arr[index]
         index += 1
     return arr
 
+def noDiv(arr):
+    res = arr
+    index = 0
+    prod = 1
+    for i in arr:
+        for x in res:
+            if res[index] == i:
+                continue
+            else:
+                x = x * i
+    return res
+
 if __name__ == "__main__":
-    arr = [3, 2, 1]
+    # arr = [3, 2, 1]
+    arr = [1,  2, 3, 4, 5]
     # arr = list(map(int, input().rstrip().split()))
     res = newProd(arr)
+    ress = noDiv(arr)
     print(res)
+    print(ress)
