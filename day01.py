@@ -11,7 +11,7 @@ def addsUp(k, arr):
     size = len(arr)
     index = 0
     start = arr[index]
-    while index < size-2:
+    while index < size-1:
         for x in range(index, size):
             if start + arr[x] == k:
                 return True
