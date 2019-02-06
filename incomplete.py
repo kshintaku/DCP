@@ -23,7 +23,18 @@ For example, the input [3, 4, -1, 1] should give 2. The input [1, 2, 0] should g
 
 You can modify the input array in-place.
 '''
+# Some thoughts: key points are linear time and constant space, array is initially unsorted
+# linear time means no sorting, I think. Has to be O(n) then, one pass
+# 0 is not a positive integer
 
+# Starting with some base cases
+# [1] is 2, [2] is 1 [-4] is 1
+# This isn't solved by adding or multiplying numbers
+# Previous permutations don't influence future combinations
+# Make into a hash map? heap? tree?
+
+# non linear time, sort array using any sort, then go through checking for 1 till an empty spot for lowest positive integer
+# or don't sort at all, start at 1 and run through len(array) times or less until we find a missing slot: n^2 complexity
 
 '''
 Jane Street
@@ -116,3 +127,27 @@ For example, if N is 4, then there are 5 unique ways:
 What if, instead of being able to climb 1 or 2 steps at a time, you could climb any number from a set of positive integers X? For example, if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a time.
 '''
 
+
+'''
+Amazon
+Given an integer k and a string s, find the length of the longest substring that contains at most k distinct characters.
+
+For example, given s = "abcba" and k = 2, the longest substring with k distinct characters is "bcb".
+'''
+
+def longStr(k, s):
+    return False
+
+if __name__ == "__main__":
+    k = 2
+    s = "abcba"
+
+    print(longStr(k, s))
+
+
+'''
+Google
+The area of a circle is defined as PIr^2. Estimate PI to 3 decimal places using a Monte Carlo method.
+
+Hint: The basic equation of a circle is x2 + y2 = r2.
+'''
