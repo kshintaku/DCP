@@ -151,3 +151,20 @@ The area of a circle is defined as PIr^2. Estimate PI to 3 decimal places using 
 
 Hint: The basic equation of a circle is x2 + y2 = r2.
 '''
+
+
+'''
+Facebook
+Given a stream of elements too large to store in memory, pick a random element from the stream with uniform probability.
+'''
+
+
+'''
+Twitter
+You run an e-commerce website and want to record the last N order ids in a log. Implement a data structure to accomplish this, with the following API:
+
+record(order_id): adds the order_id to the log
+get_last(i): gets the ith last element from the log. i is guaranteed to be smaller than or equal to N.
+You should be as efficient with time and space as possible.
+'''
+
